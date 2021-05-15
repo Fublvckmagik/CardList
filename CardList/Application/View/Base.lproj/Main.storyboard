@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z3W-YT-qmQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CardListViewController" customModule="CardList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="izS-AI-cGO">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="izS-AI-cGO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="95L-xq-RrI"/>
+                            <constraint firstItem="izS-AI-cGO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="L5R-8y-iTA"/>
+                            <constraint firstAttribute="bottom" secondItem="izS-AI-cGO" secondAttribute="bottom" id="mE6-57-MJY"/>
+                            <constraint firstItem="izS-AI-cGO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xS7-ad-J8z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ihl-f0-y6k">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="Kt0-7J-wbX">
+                            <connections>
+                                <action selector="addCardAction:" destination="BYZ-38-t0r" id="fzd-sg-aDh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="izS-AI-cGO" id="kT9-Hn-lJn"/>
+                        <segue destination="GYj-pG-N9i" kind="show" identifier="cardDetails" id="18T-Ec-rfw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="763.768115942029" y="75"/>
+        </scene>
+        <!--Detail Card View Controller-->
+        <scene sceneID="He8-5S-oCM">
+            <objects>
+                <viewController id="GYj-pG-N9i" customClass="DetailCardViewController" customModule="CardList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cb5-b8-bpi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Lw-Hp-xMJ">
+                                <rect key="frame" x="16" y="367.5" width="382" height="215"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bCf-tA-iBA">
+                                        <rect key="frame" x="289.5" y="112" width="76.5" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bCf-tA-iBA" secondAttribute="height" multiplier="3:2" id="xkV-bW-Qjr"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqc-2s-jcj">
+                                        <rect key="frame" x="30" y="61.5" width="61.5" height="32"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqO-Eq-Evy">
+                                        <rect key="frame" x="16" y="121.5" width="257.5" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstItem="bCf-tA-iBA" firstAttribute="leading" secondItem="eqO-Eq-Evy" secondAttribute="trailing" constant="16" id="Id3-1F-rn6"/>
+                                    <constraint firstItem="wqc-2s-jcj" firstAttribute="leading" secondItem="8Lw-Hp-xMJ" secondAttribute="leading" constant="30" id="OEb-1e-ce0"/>
+                                    <constraint firstAttribute="width" secondItem="8Lw-Hp-xMJ" secondAttribute="height" multiplier="16:9" id="RqL-uI-Kq4"/>
+                                    <constraint firstItem="bCf-tA-iBA" firstAttribute="width" secondItem="8Lw-Hp-xMJ" secondAttribute="width" multiplier="0.2" id="SXz-vm-rJx"/>
+                                    <constraint firstItem="eqO-Eq-Evy" firstAttribute="centerY" secondItem="8Lw-Hp-xMJ" secondAttribute="centerY" constant="30" id="b6d-Xl-blm"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wqc-2s-jcj" secondAttribute="trailing" constant="16" id="eQg-8j-ddf"/>
+                                    <constraint firstItem="eqO-Eq-Evy" firstAttribute="leading" secondItem="8Lw-Hp-xMJ" secondAttribute="leading" constant="16" id="ksA-8E-jwq"/>
+                                    <constraint firstItem="bCf-tA-iBA" firstAttribute="centerY" secondItem="eqO-Eq-Evy" secondAttribute="centerY" id="m8u-A2-hd5"/>
+                                    <constraint firstItem="wqc-2s-jcj" firstAttribute="centerY" secondItem="8Lw-Hp-xMJ" secondAttribute="centerY" constant="-30" id="nO3-3f-W0A"/>
+                                    <constraint firstAttribute="trailing" secondItem="bCf-tA-iBA" secondAttribute="trailing" constant="16" id="xFr-B7-5w0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PKk-JU-dBb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Lw-Hp-xMJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="PKk-JU-dBb" secondAttribute="top" constant="16" id="5fu-FT-q91"/>
+                            <constraint firstItem="PKk-JU-dBb" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8Lw-Hp-xMJ" secondAttribute="bottom" constant="16" id="AZv-qK-K22"/>
+                            <constraint firstItem="8Lw-Hp-xMJ" firstAttribute="centerX" secondItem="PKk-JU-dBb" secondAttribute="centerX" id="BoP-Xb-Mh9"/>
+                            <constraint firstItem="PKk-JU-dBb" firstAttribute="trailing" secondItem="8Lw-Hp-xMJ" secondAttribute="trailing" constant="16" id="K4d-jj-4Xb"/>
+                            <constraint firstItem="8Lw-Hp-xMJ" firstAttribute="leading" secondItem="PKk-JU-dBb" secondAttribute="leading" constant="16" id="n12-h4-1AX"/>
+                            <constraint firstItem="8Lw-Hp-xMJ" firstAttribute="centerY" secondItem="PKk-JU-dBb" secondAttribute="centerY" id="rwI-Bv-TRV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xsw-Hj-Aml"/>
+                    <connections>
+                        <outlet property="cardNumberLabel" destination="eqO-Eq-Evy" id="vCj-aV-u4c"/>
+                        <outlet property="cardTypeImageView" destination="bCf-tA-iBA" id="ITm-ej-mjH"/>
+                        <outlet property="cardView" destination="8Lw-Hp-xMJ" id="Bmc-n6-zt0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ith-B3-OWU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1569.5652173913045" y="75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LDe-ms-1R6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z3W-YT-qmQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kQk-Ve-nyC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TD0-81-hDI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgk-zV-GmO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146.37681159420291" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

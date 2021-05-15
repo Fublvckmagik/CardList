@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		95BFAAA4264ECAD7001A9537 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAAA3264ECAD7001A9537 /* AppDelegate.swift */; };
 		95BFAAA6264ECAD7001A9537 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAAA5264ECAD7001A9537 /* SceneDelegate.swift */; };
-		95BFAAA8264ECAD7001A9537 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAAA7264ECAD7001A9537 /* ViewController.swift */; };
+		95BFAAA8264ECAD7001A9537 /* CardListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAAA7264ECAD7001A9537 /* CardListVC.swift */; };
 		95BFAAAB264ECAD7001A9537 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BFAAA9264ECAD7001A9537 /* Main.storyboard */; };
 		95BFAAAD264ECADD001A9537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95BFAAAC264ECADD001A9537 /* Assets.xcassets */; };
 		95BFAAB0264ECADD001A9537 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BFAAAE264ECADD001A9537 /* LaunchScreen.storyboard */; };
+		95BFAAC3264ECC79001A9537 /* CardListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAAC2264ECC79001A9537 /* CardListModel.swift */; };
+		95BFAAC8264ECD6A001A9537 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAAC7264ECD6A001A9537 /* Text.swift */; };
+		95BFAACC264ED3B1001A9537 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAACA264ED3B1001A9537 /* CardCell.swift */; };
+		95BFAACD264ED3B1001A9537 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BFAACB264ED3B1001A9537 /* CardCell.xib */; };
+		95BFAAD4264EE94E001A9537 /* DetailCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAAD3264EE94E001A9537 /* DetailCardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		95BFAAA0264ECAD7001A9537 /* CardList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BFAAA3264ECAD7001A9537 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95BFAAA5264ECAD7001A9537 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		95BFAAA7264ECAD7001A9537 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95BFAAA7264ECAD7001A9537 /* CardListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListVC.swift; sourceTree = "<group>"; };
 		95BFAAAA264ECAD7001A9537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95BFAAAC264ECADD001A9537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95BFAAAF264ECADD001A9537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95BFAAB1264ECADD001A9537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95BFAAC2264ECC79001A9537 /* CardListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListModel.swift; sourceTree = "<group>"; };
+		95BFAAC7264ECD6A001A9537 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		95BFAACA264ED3B1001A9537 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		95BFAACB264ED3B1001A9537 /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		95BFAAD3264EE94E001A9537 /* DetailCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,100 @@
 		95BFAAA2264ECAD7001A9537 /* CardList */ = {
 			isa = PBXGroup;
 			children = (
-				95BFAAA3264ECAD7001A9537 /* AppDelegate.swift */,
-				95BFAAA5264ECAD7001A9537 /* SceneDelegate.swift */,
-				95BFAAA7264ECAD7001A9537 /* ViewController.swift */,
-				95BFAAA9264ECAD7001A9537 /* Main.storyboard */,
+				95BFAAB9264ECB75001A9537 /* Application */,
+				95BFAABC264ECBDD001A9537 /* CardListVC */,
+				95BFAAD1264EE8A3001A9537 /* DetailCardVC */,
 				95BFAAAC264ECADD001A9537 /* Assets.xcassets */,
-				95BFAAAE264ECADD001A9537 /* LaunchScreen.storyboard */,
 				95BFAAB1264ECADD001A9537 /* Info.plist */,
 			);
 			path = CardList;
+			sourceTree = "<group>";
+		};
+		95BFAAB9264ECB75001A9537 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				95BFAAC6264ECD5A001A9537 /* Model */,
+				95BFAABB264ECBAC001A9537 /* View */,
+				95BFAABA264ECB9A001A9537 /* Controller */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		95BFAABA264ECB9A001A9537 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				95BFAAA3264ECAD7001A9537 /* AppDelegate.swift */,
+				95BFAAA5264ECAD7001A9537 /* SceneDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		95BFAABB264ECBAC001A9537 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				95BFAAA9264ECAD7001A9537 /* Main.storyboard */,
+				95BFAAAE264ECADD001A9537 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		95BFAABC264ECBDD001A9537 /* CardListVC */ = {
+			isa = PBXGroup;
+			children = (
+				95BFAAC0264ECBF6001A9537 /* Controllers */,
+				95BFAABF264ECBF0001A9537 /* Views */,
+				95BFAABE264ECBEB001A9537 /* Models */,
+			);
+			path = CardListVC;
+			sourceTree = "<group>";
+		};
+		95BFAABE264ECBEB001A9537 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				95BFAAC2264ECC79001A9537 /* CardListModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		95BFAABF264ECBF0001A9537 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				95BFAACA264ED3B1001A9537 /* CardCell.swift */,
+				95BFAACB264ED3B1001A9537 /* CardCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		95BFAAC0264ECBF6001A9537 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				95BFAAA7264ECAD7001A9537 /* CardListVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		95BFAAC6264ECD5A001A9537 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95BFAAC7264ECD6A001A9537 /* Text.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95BFAAD1264EE8A3001A9537 /* DetailCardVC */ = {
+			isa = PBXGroup;
+			children = (
+				95BFAAD6264EEF0D001A9537 /* Controller */,
+			);
+			path = DetailCardVC;
+			sourceTree = "<group>";
+		};
+		95BFAAD6264EEF0D001A9537 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				95BFAAD3264EE94E001A9537 /* DetailCardViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +222,7 @@
 				95BFAAB0264ECADD001A9537 /* LaunchScreen.storyboard in Resources */,
 				95BFAAAD264ECADD001A9537 /* Assets.xcassets in Resources */,
 				95BFAAAB264ECAD7001A9537 /* Main.storyboard in Resources */,
+				95BFAACD264ED3B1001A9537 /* CardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +233,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95BFAAA8264ECAD7001A9537 /* ViewController.swift in Sources */,
+				95BFAAA8264ECAD7001A9537 /* CardListVC.swift in Sources */,
+				95BFAAC8264ECD6A001A9537 /* Text.swift in Sources */,
+				95BFAAC3264ECC79001A9537 /* CardListModel.swift in Sources */,
 				95BFAAA4264ECAD7001A9537 /* AppDelegate.swift in Sources */,
+				95BFAAD4264EE94E001A9537 /* DetailCardViewController.swift in Sources */,
 				95BFAAA6264ECAD7001A9537 /* SceneDelegate.swift in Sources */,
+				95BFAACC264ED3B1001A9537 /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +389,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6RW4NDLQ7B;
 				INFOPLIST_FILE = CardList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +397,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dimart.CardList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +409,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6RW4NDLQ7B;
 				INFOPLIST_FILE = CardList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +417,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dimart.CardList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
